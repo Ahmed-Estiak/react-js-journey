@@ -1,26 +1,30 @@
 import './App.css';
+import Header from './header';
+import TaskCounter from './all_components/taskcounter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <div>
-      <h1>Hello from React!</h1>
-      <p>This is a React component.</p>
-    </div>
-    
-      </header>
+      <TaskCounter />
+      <Header title="My Boy"/>
+      <p style={{ fontSize: '20px', color: 'darkblue' }}>
+        This is a simple React application demonstrating a custom header.
+      </p>
+      <p style={{ fontSize: '16px', color: 'gray' }}>
+        You can modify the styles and content as needed.
+      </p>
+      <p style={{ fontSize: '14px', color: 'black' }}>
+        Enjoy coding with React!
+      </p>
+      <footer style={{ marginTop: '20px', color: 'darkgray' }}>
+        <p>© 2023 Your Name</p>
+      </footer>
+      <p style={{ fontSize: '12px', color: 'lightgray' }}>
+        This is a footer section with some additional information.
+      </p>
+      <p style={{ fontSize: '14px', color: 'black' }}>
+        Feel free to explore and customize this application further.
+      </p>
     </div>
   );
 }
