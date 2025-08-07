@@ -1,11 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -21,6 +19,7 @@ function App() {
       <h1>Hello from React!</h1>
       <p>This is a React component.</p>
     </div>
+    
       </header>
     </div>
   );
