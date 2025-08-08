@@ -12,6 +12,7 @@ function TaskCounter() {
       setCount(count - 1);
     }
   };
+  console.log("Button clicked");
 
   return (
     <div style={{ textAlign: 'center', marginTop: '20px' }}>

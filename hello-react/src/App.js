@@ -25,6 +25,7 @@ function App() {
       <p style={{ fontSize: '14px', color: 'black' }}>
         Feel free to explore and customize this application further.
       </p>
+
     </div>
   );
 }
