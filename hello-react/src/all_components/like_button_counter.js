@@ -9,7 +9,7 @@ function LikeButtonCounter() {
   };
 
   return (
-    <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100vh'}}>
+    <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'20vh'}}>
       <button onClick={handleLike} style={{backgroundColor:'blue',color:'white',padding:'10px',borderRadius:'5px',cursor:'pointer'}}>
       ❤️ {count}
       </button>
