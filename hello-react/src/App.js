@@ -3,6 +3,7 @@ import Header from './header';
 import TaskCounter from './all_components/taskcounter';
 import Quote from './all_components/quote';
 import LikeButtonCounter from './all_components/like_button_counter';
+import ToDoList from './all_components/to-do_list';
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
         <h1>Tasks</h1>
         <TaskCounter />
         <LikeButtonCounter />
+      </div>
+
+      <div style={{ padding: "20px" }}>
+        <ToDoList />
       </div>
 
       <div style={{ padding: "20px" }}>
