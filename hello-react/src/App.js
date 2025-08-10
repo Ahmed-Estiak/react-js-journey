@@ -2,6 +2,7 @@ import './App.css';
 import Header from './header';
 import TaskCounter from './all_components/taskcounter';
 import Quote from './all_components/quote';
+import LikeButtonCounter from './all_components/like_button_counter';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div style={{ padding: "20px" }}>
         <h1>Tasks</h1>
         <TaskCounter />
+        <LikeButtonCounter />
       </div>
 
       <div style={{ padding: "20px" }}>
