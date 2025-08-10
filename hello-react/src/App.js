@@ -4,6 +4,7 @@ import TaskCounter from './all_components/taskcounter';
 import Quote from './all_components/quote';
 import LikeButtonCounter from './all_components/like_button_counter';
 import ToDoList from './all_components/to-do_list';
+import ToDoListReloaded from './all_components/to-do_list_reloaded';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
 
       <div style={{ padding: "20px" }}>
         <ToDoList />
+      </div>
+      <div style={{ padding: "20px" }}>
+        <ToDoListReloaded />
       </div>
 
       <div style={{ padding: "20px" }}>
