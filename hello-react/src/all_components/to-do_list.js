@@ -17,6 +17,7 @@ function ToDoList() {
     <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'left',height:'20vh'}}>
       <h1>To-Do List</h1>
       <ul style={{paddingLeft: '0', listStyle: 'none'}}>
+        
         {taskList.map(task => (
           <li key={task.id} style={{
             textDecoration: task.completed ? 'line-through' : 'none',
