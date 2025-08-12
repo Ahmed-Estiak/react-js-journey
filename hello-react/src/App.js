@@ -6,6 +6,8 @@ import LikeButtonCounter from './all_components/like_button_counter';
 import ToDoList from './all_components/to-do_list';
 import ToDoListReloaded from './all_components/to-do_list_reloaded';
 import LiveInput from './all_components/live_input';
+import UltimateToDo from './all_components/ultimate-to-do';
+
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
       </div>
       <div style={{ padding: "20px" }}>
         <LiveInput />
+      </div>
+      <div style={{ padding: "20px" }}>
+        <UltimateToDo />
       </div>
 
       <div style={{ padding: "20px" }}>
