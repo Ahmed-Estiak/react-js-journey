@@ -7,6 +7,7 @@ import ToDoList from './all_components/to-do_list';
 import ToDoListReloaded from './all_components/to-do_list_reloaded';
 import LiveInput from './all_components/live_input';
 import UltimateToDo from './all_components/ultimate-to-do';
+import Parent from './other/parent';
 
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
       </div>
       <div style={{ padding: "20px" }}>
         <ToDoListReloaded />
+      </div>
+      <div style={{ padding: "20px" }}>
+        <Parent />
       </div>
 
       <div style={{ padding: "20px" }}>
