@@ -14,6 +14,7 @@ function ColorPicker({onPick}){
           transition: "transform 0.2s",
         }}
         title={c}
+        
         />
       ))}
     </div>
