@@ -6,7 +6,7 @@ function ContactForm(){
     email: "",
     message: "",
     isSubmitted: false,
-    error: "",
+    error: false,
     success: false,
     
   });
@@ -18,12 +18,12 @@ function ContactForm(){
   const handleSubmit=(e)=>{
     e.preventDefault();
     if(formData.name.trim() === "" || formData.email.trim() === "" || formData.message.trim() === ""){
-      setFormData({...formData, error: "All fields are required"});
+      setFormData({...formData, error: true, success: false, isSubmitted: false});
       return;
     }
-    setFormData({...formData, isSubmitted: true, error: "", success: true});
+    setFormData({...formData, isSubmitted: true, success: true, error: false});
     setTimeout(()=>{
-      setFormData({...formData, isSubmitted: false, success: false});
+      setFormData(prev => ({...prev, isSubmitted: false, error: false, success: false}));
     }, 3000);
   }
 
@@ -44,8 +44,8 @@ function ContactForm(){
           <textarea id="message" name="message" value={formData.message} onChange={handleChange} required/>
         </div>
 
-        {formData.error && <p className="error">{formData.error}</p>}
-          {formData.success && <p className="success">Message sent successfully!</p>}
+        {formData.error && <p className="error">All fields are required</p>}
+        {formData.success && <p className="success">Message sent successfully!</p>}
 
         <button type="submit" disabled={formData.isSubmitted}>
           {formData.isSubmitted ? "Sending..." : "Submit"}
