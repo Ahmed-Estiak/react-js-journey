@@ -9,6 +9,7 @@ import LiveInput from './all_components/live_input';
 import UltimateToDo from './all_components/ultimate-to-do';
 import Parent from './other/parent';
 import LightToDo from './all_components/light-to-do';
+import ContactForm from './all_components/contact-form';
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
       </div>
       <div style={{ padding: "20px" }}>
         <LiveInput />
+      </div>
+      <div style={{ padding: "20px" }}>
+        <ContactForm />
       </div>
       <div style={{ padding: "20px" }}>
         <UltimateToDo />
