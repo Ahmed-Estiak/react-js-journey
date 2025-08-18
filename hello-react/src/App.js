@@ -10,7 +10,7 @@ import UltimateToDo from './all_components/ultimate-to-do';
 import Parent from './other/parent';
 import LightToDo from './all_components/light-to-do';
 import ContactForm from './all_components/contact-form';
-
+import SecondContactForm from './all_components/second-contact-form';
 
 function App() {
   return (
@@ -30,6 +30,9 @@ function App() {
       </div>
       <div style={{ padding: "20px" }}>
         <ContactForm />
+      </div>
+      <div style={{ padding: "20px" }}>
+        <SecondContactForm />
       </div>
       <div style={{ padding: "20px" }}>
         <UltimateToDo />
