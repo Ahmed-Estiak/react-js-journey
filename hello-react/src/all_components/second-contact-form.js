@@ -9,12 +9,16 @@ function SecondContactForm(){
 
   const handleSubmit=(e)=>{
     e.preventDefault();
+    console.log("Form submitted:", {name, email, message});
     if(name.trim() === "" || email.trim() === "" || message.trim() === ""){
       setError("All fields are required");
       return;
     }
     setError("");
     setSuccess("Message sent successfully!");
+    setName("");
+    setEmail("");
+    setMessage("");
     setTimeout(()=>{
       setSuccess("");
     }, 3000);
