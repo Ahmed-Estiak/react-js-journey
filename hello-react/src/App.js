@@ -8,6 +8,7 @@ import ToDoListReloaded from './all_components/to-do_list_reloaded';
 import LiveInput from './all_components/live_input';
 import UltimateToDo from './all_components/ultimate-to-do';
 import Parent from './other/parent';
+import LightToDo from './all_components/light-to-do';
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
         <h1>Tasks</h1>
         <TaskCounter />
         <LikeButtonCounter />
+      </div>
+      <div style={{ padding: "20px" }}>
+        <LightToDo />
       </div>
       <div style={{ padding: "20px" }}>
         <LiveInput />
