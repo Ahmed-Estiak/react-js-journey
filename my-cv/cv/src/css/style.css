@@ -1,0 +1,131 @@
+
+
+
+.navbar {
+  background-color: #f0f0f0;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+nav{
+  position: sticky;
+  top: 0;
+  /*background-color: white; /* or any color */
+  z-index: 1000;
+}
+
+.name h1 {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 27px;
+  color: #34597e;
+}
+
+.name p {
+  margin: 5px 0 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #393939;
+}
+
+.about {
+  padding: 150px 20px;
+  background-color: #fff;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;  /* Pushes items apart */
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  flex-wrap: nowrap; /*-be careful*/
+  
+}
+
+.image-wrapper {
+  width: 350px;           /* Lock width */
+  flex-shrink: 0;         /* Prevent squishing */
+  position: sticky;
+  top: 100px; /* distance from top of viewport */
+  height: fit-content;
+}
+
+
+.about-img {
+  position: relative;
+  top: 30px;
+  width: 350px;
+  height: 450px;
+  overflow: visible;
+  /*background-color: rgba(0, 0, 0, 0.05);*/
+  flex-shrink: 0;
+  
+}
+
+.bg-box {
+  background-color: #7510F7;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border: 2px solid red; /* test border */
+  box-shadow: 0 0 50px rgba(3, 119, 251, 0.919);
+}
+
+.cutout-img {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 65%;
+  z-index: 40; /* higher than bg-box */
+  border: 2px solid lime; /* test border */
+  object-fit: contain;
+}
+
+
+.about-text {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.about-text h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 22px;
+  line-height: 1.5;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    position: static; /* ❗ Disable sticky */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .about-img {
+    position: relative;
+  }
+}
+
