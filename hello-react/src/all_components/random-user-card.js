@@ -10,6 +10,7 @@ function RandomUserCard(){
       const response = await fetch("https://randomuser.me/api/");
       const data= await response.json();
       setUser(data.results[0]);
+      console.log(data.results[0]);
     }catch(error){
       console.error("Error fetching user:", error);
     }
