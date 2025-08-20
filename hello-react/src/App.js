@@ -11,6 +11,7 @@ import Parent from './other/parent';
 import LightToDo from './all_components/light-to-do';
 import ContactForm from './all_components/contact-form';
 import SecondContactForm from './all_components/second-contact-form';
+import RandomUserCard from './all_components/random-user-card';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
       </div>
       <div style={{ padding: "20px" }}>
         <LightToDo />
+      </div>
+      <div style={{ padding: "20px" }}>
+        <RandomUserCard />
       </div>
       <div style={{ padding: "20px" }}>
         <LiveInput />
