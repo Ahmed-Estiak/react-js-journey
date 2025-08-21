@@ -1,40 +1,7 @@
 import React from "react";
-import {Link, useLocation} from "react-router-dom";
-
-const links = [
-  { id: "header", label: "Header", type: "hash" },
-  { id: "about", label: "About", type: "hash" },
-  { id: "projects", label: "Projects", type: "route" },
-  { id: "contact", label: "Contact", type: "route" },
-];
-
-export default function TopNav() {
-  const handleHash = (e, id) => {
-    e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
-  return (
-    <nav className="topnav" aria-label="Section Navigation">
-      {links.map((l) =>
-        l.type === "hash" ? (
-          <a key={l.id} href={`#${l.id}`} onClick={(e) => handleHash(e, l.id)}>
-            {l.label}
-          </a>
-        ) : (
-          // route links jump to /projects or /contact (App will auto-scroll)
-          <Link key={l.id} to={`/${l.id}`}>
-            {l.label}
-          </Link>
-        )
-      )}
-    </nav>
-  );
-}
 
 
-/*const navLinks = [
+const navLinks = [
   {path: "/", label: "Home"},
   {path: "/projects", label: "Projects"},
   {path: "/contact", label: "Contact"},
@@ -84,4 +51,4 @@ return (
 </nav>
 );
 }
-*/ /* } */
+*/ }
