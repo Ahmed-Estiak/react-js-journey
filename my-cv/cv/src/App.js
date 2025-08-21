@@ -8,6 +8,7 @@ import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {ThemeProvider} from "./context/ThemeContext";
 
 function HomePage(){
   return(
@@ -32,6 +33,7 @@ function ContactPage(){
 
 export default function App() {
   return (
+    <ThemeProvider>
     <BrowserRouter>
       <div className="layout">
         {/* Left fixed/ sticky sidebar (your name) */}
@@ -52,6 +54,7 @@ export default function App() {
         </main>
       </div>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

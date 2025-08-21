@@ -18,14 +18,13 @@ export function ThemeProvider({children}){
 
   const toggleTheme = ()=>{
     setTheme((t)=>t==="dark" ? "light" : "dark");
-    const value = useMemo(()=>({
-      theme, toggleTheme
-    }), [theme]);
-    return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   }
 
-  
+  const value = useMemo(()=>({
+    theme, toggleTheme
+  }), [theme]);
 
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }
 
 export function useTheme(){
