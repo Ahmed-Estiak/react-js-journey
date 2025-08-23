@@ -92,7 +92,7 @@ function UltimateToDo(){
           if(e.key==="Enter") addItem();
         }
       }
-      autoFocus />
+       />
       </div>
       <ul style={styles.list}>
         {items.map((item)=>(
