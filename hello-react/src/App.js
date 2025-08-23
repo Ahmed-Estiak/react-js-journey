@@ -12,6 +12,9 @@ import LightToDo from './all_components/light-to-do';
 import ContactForm from './all_components/contact-form';
 import SecondContactForm from './all_components/second-contact-form';
 import RandomUserCard from './all_components/random-user-card';
+import UserList from './all_components/UserList';
+import UserDetail from './all_components/UserDetail';
+import MainUserList from './all_components/main-user-list';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
       </div>
       <div style={{ padding: "20px" }}>
         <LightToDo />
+      </div>
+      <div style={{ padding: "20px" }}>
+        <MainUserList />
       </div>
       <div style={{ padding: "20px" }}>
         <RandomUserCard />
