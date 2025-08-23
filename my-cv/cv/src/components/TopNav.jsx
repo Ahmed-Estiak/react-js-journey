@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import {NavLink} from "react-router-dom";
 
 const navLinks = [
   {path: "/", label: "Home"},
@@ -14,13 +15,13 @@ export default function TopNav(){
   return(
     <nav className="topnav" aria-label="Section Navigation">
       {navLinks.map((link)=>(
-        <Link 
+        <NavLink 
           key={link.path} 
           to={link.path}
           className={location.pathname === link.path ? "active" : ""}
         >
           {link.label}
-        </Link>
+        </NavLink>
       ))}
       <button onClick={toggleTheme} className="theme-toggle" style={{marginLeft: "auto"}} aria-label="Toggle Theme">
         {theme === "dark" ? "🌞" : "🌙"}

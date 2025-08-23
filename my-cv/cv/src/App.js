@@ -9,6 +9,7 @@ import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {ThemeProvider} from "./context/ThemeContext";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function HomePage(){
   return(
@@ -49,6 +50,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

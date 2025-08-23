@@ -1,26 +1,43 @@
 import React from "react";
-
-
-const projects = [
-{ id: 1, title: "Note Taker", desc: "Add/edit/delete, localStorage persist." },
-{ id: 2, title: "Random User Card", desc: "Fetch API + smooth UI." },
-{ id: 3, title: "Text Analyzer", desc: "Counts chars/words/sentences." },
-];
+import { projects } from "../data/projects";
+import {Link} from "react-router-dom";
 
 
 export default function Projects() {
-return (
-<div className="stack">
-<h2>Projects</h2>
-<div className="grid">
-{projects.map((p) => (
-<article key={p.id} className="card">
-<h3>{p.title}</h3>
-<p>{p.desc}</p>
-{/* Later: link to live demo / GitHub */}
-</article>
-))}
-</div>
-</div>
-);
+  return (
+    <div className="stack">
+      <h2>Projects</h2>
+      <div className="grid">
+        {projects.map((project) => (
+          <article key={project.id} className="card project-card">
+            <h3>{project.title}</h3>
+            <p>{project.shortDesc}</p>
+            <div className="project-tech">
+              {project.tech.slice(0, 2).map(tech => (
+                <span key={tech} className="tech-tag">{tech}</span>
+              ))}
+            </div>
+            <div className="project-actions">
+              <Link 
+                to={`/projects/${project.id}`} 
+                className="btn btn-primary"
+              >
+                View Details
+              </Link>
+              {project.status === "completed" && project.demoUrl && (
+                <a 
+                  href={project.demoUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                >
+                  Live Demo
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
 }
