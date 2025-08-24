@@ -1,9 +1,9 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-import { useProjects } from "../context/ProjectsContext";
+import { useProject } from "../context/ProjectContext";
 
 export default function Projects() {
-  const { projects } = useProjects();
+  const { projects } = useProject();
   
   return (
     <div className="stack">

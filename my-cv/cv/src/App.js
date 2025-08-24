@@ -10,7 +10,7 @@ import Contact from "./sections/Contact";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {ThemeProvider} from "./context/ThemeContext";
 import ProjectDetail from "./pages/ProjectDetail";
-import { ProjectsProvider } from "./context/ProjectsContext";
+import { ProjectProvider } from "./context/ProjectContext";
 
 function HomePage(){
   return(
@@ -36,7 +36,7 @@ function ContactPage(){
 export default function App() {
   return (
     <ThemeProvider>
-      <ProjectsProvider>
+      <ProjectProvider>
         <BrowserRouter>
           <div className="layout">
             {/* Left fixed/ sticky sidebar (your name) */}
@@ -58,7 +58,7 @@ export default function App() {
             </main>
           </div>
         </BrowserRouter>
-      </ProjectsProvider>
+      </ProjectProvider>
     </ThemeProvider>
   );
 }
