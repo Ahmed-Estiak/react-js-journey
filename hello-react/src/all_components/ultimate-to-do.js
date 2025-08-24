@@ -111,9 +111,10 @@ function UltimateToDo(){
           onKeyDown={(e)=> {
             if(e.key==="Enter") commitEdit();
             if(e.key==="Escape") {
-              setEditingId(null);
+              setEditingId(null); 
               setEditText("");
             }
+            
           }}
           autoFocus />
           )
