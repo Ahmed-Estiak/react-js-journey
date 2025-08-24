@@ -156,5 +156,42 @@ html, body {
   gap: 12px;
 }
 
+/* Card variants */
+.card-elevated {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-elevated:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-bordered {
+  border: 2px solid var(--border);
+}
+
+/* Button sizes */
+.btn-small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.btn-medium {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* Button as Link styling */
+.btn[href] {
+  display: inline-block;
+  text-decoration: none;
+}
+
 
 

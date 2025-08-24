@@ -10,6 +10,7 @@ import Contact from "./sections/Contact";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {ThemeProvider} from "./context/ThemeContext";
 import ProjectDetail from "./pages/ProjectDetail";
+import { ProjectsProvider } from "./context/ProjectsContext";
 
 function HomePage(){
   return(
@@ -35,27 +36,29 @@ function ContactPage(){
 export default function App() {
   return (
     <ThemeProvider>
-    <BrowserRouter>
-      <div className="layout">
-        {/* Left fixed/ sticky sidebar (your name) */}
-        <aside className="sidebar">
-          <Sidebar />
-        </aside>
+      <ProjectsProvider>
+        <BrowserRouter>
+          <div className="layout">
+            {/* Left fixed/ sticky sidebar (your name) */}
+            <aside className="sidebar">
+              <Sidebar />
+            </aside>
 
-        {/* Right content area with nav + sections */}
-        <main className="content">
-          <TopNav />
+            {/* Right content area with nav + sections */}
+            <main className="content">
+              <TopNav />
 
-          {/* Routes */}
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/projects/:id" element={<ProjectDetail />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
-      </div>
-    </BrowserRouter>
+              {/* Routes */}
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/projects/:id" element={<ProjectDetail />} />
+                <Route path="/contact" element={<ContactPage />} />
+              </Routes>
+            </main>
+          </div>
+        </BrowserRouter>
+      </ProjectsProvider>
     </ThemeProvider>
   );
 }
